@@ -3,7 +3,9 @@ const GasPlugin = require("gas-webpack-plugin");
 
 module.exports = {
     entry: './src/index.ts',
-    mode: "development",
+    // GAS環境ではproductionモードの最適化（concatenateModules等）が
+    // gas-webpack-pluginのグローバル関数エクスポートと競合するためdevelopmentを使用
+    mode: 'development',
     devtool: false,
 
     output: {
