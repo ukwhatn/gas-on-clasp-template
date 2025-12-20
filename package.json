@@ -7,7 +7,7 @@
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "push": "clasp push --force",
-    "deploy": "npm run build && clasp push --force"
+    "deploy": "bun run build && clasp push --force"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
